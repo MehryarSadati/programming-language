@@ -13,24 +13,18 @@ class Visitor(GrammarVisitor):
     def __init__(self):
         self.myvars = {}
 
+
     def visitRoot(self, ctx):
         for child in ctx.statement():
             self.visit(child)
 
-#written by myself in case of error check with 
-    def visitAssign(self, ctx):
-        # l = list(ctx.getChildren())
-        # self.myvars[self.visit(l[0])] = self.visit(l[2])
 
-        #debuging:
-            
+    def visitAssign(self, ctx):            
         var = ctx.ID().getText()
         value = self.visit(ctx.expr())
-        print(f"Debug: Assigning {var} = {value}")  # Debug line
         self.myvars[var] = value
-        print(f"Debug: myvars = {self.myvars} and the dict is {self.myvars.items()}")    # Debug line
+    
 
-#debuging completed but don't fully trust it yet
     def visitPrintStmt(self, ctx):
         value = self.visit(ctx.expr())
         var = ctx.expr().getText()
@@ -43,8 +37,10 @@ class Visitor(GrammarVisitor):
     def visitNum(self, ctx):
         return int(ctx.NUM().getText())
     
+
     def visitString(self, ctx):
         return ctx.STR().getText()
+
 
     def visitVar(self, ctx):
         var = ctx.ID().getText()
@@ -53,26 +49,32 @@ class Visitor(GrammarVisitor):
         else:
             print(f"ERROR! variable '{var}' not assigned!")
             return None
-        
+
+
     def visitOps(self, ctx):
         l = list(ctx.getChildren())
         return ops[l[1].getText()](self.visit(l[0]), self.visit(l[2]))
     
+
     def visitGt(self, ctx):
         l = list(ctx.getChildren())
         return int(self.visit(l[0]) > self.visit(l[2]))
     
+
     def visitLt(self, ctx):
         l = list(ctx.getChildren())
         return int(self.visit(l[0]) < self.visit(l[2]))
     
+
     def visitEqual(self, ctx):
         l = list(ctx.getChildren())
         return (self.visit(l[0]) == self.visit(l[2]))
     
+
     def visitUnequal(self, ctx):
         l = list(ctx.getChildren())
         return (self.visit(l[0]) != self.visit(l[2]))
+    
     
     def visitCondition(self, ctx):
         l = list(ctx.getChildren())
