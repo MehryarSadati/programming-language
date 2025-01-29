@@ -34,6 +34,6 @@ This repository contains a simple programming language implemented using ANTLR4 
    ```
 
 5. **You can run programs written in this language using the interpreter by executing script.py.**:
-```bash
-python3 script.py
-```
+   ```bash
+   python3 script.py
+   ```
