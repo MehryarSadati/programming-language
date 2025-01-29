@@ -5,6 +5,7 @@ from GrammarLexer import GrammarLexer
 from GrammarParser import GrammarParser
 from Visitor import Visitor
 
+
 def main():
     readline.read_init_file()
     print("Welcome!")
@@ -21,6 +22,7 @@ def main():
         tree = parser.root()
 
         visitor.visit(tree)
+
 
 if __name__ == "__main__":
     main()
