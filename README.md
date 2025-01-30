@@ -73,59 +73,55 @@ The language supports variable assignments, print statements, and conditional st
 ## Statements
 
 ### Assignment
-Variables are assigned using the `:=` operator:
-```
-variable := value
-```
+  Variables are assigned using the `:=` operator:
+  ```
+  variable := value
+  ```
 Example:
-```
-x := 42
-message := "Hello"
-```
+  ```
+  x := 42
+  message := "Hello"
+  ```
 
 ### Print Statement
 Output values using the `print` keyword:
-```
-print expression
-```
+  ```
+  print expression
+  ```
 Example:
-```
-print x
-print "Hello World"
-print 42
-```
+  ```
+  print x
+  print "Hello World"
+  print 42
+  ```
 
 ### Conditional Statement
 If-else statements follow this syntax:
-```
-if condition statement
-if condition statement else statement
-```
+  ```
+  if condition statement
+  if condition statement else statement
+  ```
 Example:
-```
-if x > 10 print "Greater than 10"
-if x == 5 print "Five" else print "Not five"
-```
+  ```
+  if x > 10 print "Greater than 10"
+  if x == 5 print "Five" else print "Not five"
+  ```
 
 ## Examples
 
 Here are some complete code examples:
 
-```
-x := 42
-print x
+  ```
+  x := 42
+  print x
 
-if x > 20
-    print "x is greater than 20"
-else
-    print "x is less than or equal to 20"
+  if x > 20 print "x is greater than 20" else print "x is less than or equal to 20"
 
-message := "Hello"
-print message
+  message := "Hello"
+  print message
 
-if message == "Hello"
-    print "Greeting detected"
-```
+  if message == "Hello" print "Greeting detected"
+  ```
 
 ## Notes
 - Each statement must be on a new line
