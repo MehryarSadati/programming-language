@@ -13,31 +13,33 @@ This repository contains a simple programming language implemented using ANTLR4 
 
 1. **Clone the Repository**:
 
-   ```bash
-   git clone https://github.com/MehryarSadati/programming-language.git
-   cd programming-language
-   ```
+  ```bash
+  git clone https://github.com/MehryarSadati/programming-language.git
+  cd programming-language
+  ```
 2. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 3. **Install ANTLR4**:
+
     Download ANTLR4 Tool: ANTLR4 Complete JAR
     Move the JAR File: Place it in the project directory.
 
     For convenience, you can add an alias to your shell profile.
 
 4. **Generate Lexer, Parser and Visitor (with -no-listener flag)**:
-   ```bash
-   antlr4 -Dlanguage=Python3 -no-listener -visitor Grammar.g4
-   ```
+  ```bash
+  antlr4 -Dlanguage=Python3 -no-listener -visitor Grammar.g4
+  ```
 
 5. **Run programs written in this language using the interpreter by executing script.py**:
-   ```bash
-   python3 script.py
-   ```
-   
+  ```bash
+  python3 script.py
+  ```
+
 
 # Syntax
 
