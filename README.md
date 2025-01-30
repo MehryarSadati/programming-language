@@ -35,7 +35,14 @@ This repository contains a simple programming language implemented using ANTLR4 
   antlr4 -Dlanguage=Python3 -no-listener -visitor Grammar.g4
   ```
 
-5. **Run programs written in this language using the interpreter by executing script.py**:
+5. **Run programs**:
+
+   you can run programs with one of two ways:
+   - Add a `code.txt` file and write your program in there using the correct syntax and then use the interpreter:
+  ```bash
+  python3 script.py code.txt
+  ```
+  - Start writing your program in the terminal and write the command `exit` when you're done:
   ```bash
   python3 script.py
   ```
